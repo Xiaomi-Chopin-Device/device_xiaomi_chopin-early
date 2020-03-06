@@ -120,6 +120,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy-minimal/private
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Verified Boot
 BOARD_AVB_ENABLE := true

@@ -41,6 +41,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.recovery.rc \
+    init.recovery.sh
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
