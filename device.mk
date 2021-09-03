@@ -325,6 +325,10 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     android.frameworks.sensorservice@1.0
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
