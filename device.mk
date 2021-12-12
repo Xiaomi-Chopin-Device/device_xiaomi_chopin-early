@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.lights-service.chopin
+
 # Media Codec2 modules
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
