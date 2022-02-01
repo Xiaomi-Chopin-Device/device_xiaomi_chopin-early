@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworkResOverlayChopin \
     WifiResOverlayChopin
 
 # Partitions
