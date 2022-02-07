@@ -85,6 +85,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/xiaomi/chopin
 
 # Metadata
+BOARD_ROOT_EXTRA_FOLDERS += metadata
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
