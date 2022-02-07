@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc \
     init.recovery.usb.rc
 
+# Exclude sensor from InputManager
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml \
+
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
