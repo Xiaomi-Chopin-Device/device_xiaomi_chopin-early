@@ -32,9 +32,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-PRODUCT_COPY_FILES += \
-    $(CHOPIN_PREBUILT)/recovery/system/lib64/hw/android.hardware.boot@1.0-impl-1.1-mtkimpl.so:recovery/root/system/lib64/hw/android.hardware.boot@1.0-impl-1.1-mtkimpl.so \
-    $(CHOPIN_PREBUILT)/recovery/system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so:recovery/root/system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so
+PRODUCT_PACKAGES += \
+    otapreopt_script \
 
 # Audio
  PRODUCT_PACKAGES += \
@@ -44,6 +43,22 @@ PRODUCT_COPY_FILES += \
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl.recovery \
+    bootctrl.mt6893.recovery
+
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl \
+    android.hardware.boot@1.1-service \
+    bootctrl.mt6893
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+PRODUCT_COPY_FILES += \
+    $(CHOPIN_PREBUILT)/recovery/system/lib64/hw/android.hardware.boot@1.0-impl-1.1-mtkimpl.so:recovery/root/system/lib64/hw/android.hardware.boot@1.0-impl-1.1-mtkimpl.so \
 
 # Build MT-PL-Utils
 PRODUCT_PACKAGES += \
@@ -64,6 +79,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
+
+PRODUCT_COPY_FILES += \
+    $(CHOPIN_PREBUILT)/recovery/system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so:recovery/root/system/lib64/hw/android.hardware.fastboot@1.0-impl-mtk.so
 
 # F2FS utilities
 PRODUCT_PACKAGES += \
@@ -133,7 +151,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
-    otapreopt_script \
     update_engine \
     update_engine_sideload \
     update_verifier
