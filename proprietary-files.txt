@@ -1,4 +1,9 @@
 
+# APNs
+etc/apns-conf.xml
+etc/fiveG-apns-conf.xml
+etc/xcap-apns-conf.xml
+
 # Audio (Hardware)
 system_ext/lib/vendor.mediatek.hardware.audio@6.1.so
 system_ext/lib64/vendor.mediatek.hardware.audio@6.1.so
