@@ -104,6 +104,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6891:recovery/root/first_stage_ramdisk/fstab.mt6891 \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6893:recovery/root/first_stage_ramdisk/fstab.mt6893 \
 
+# Heath HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-service \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
@@ -144,6 +150,10 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 
 # Properties
 include $(LOCAL_PATH)/properties/default.mk
+
+# Screen density
+PRODUCT_AAPT_CONFIG := xxxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
