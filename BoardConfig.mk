@@ -60,7 +60,7 @@ BOARD_KERNEL_SECOND_OFFSET := 0xbff88000
 BOARD_RAMDISK_OFFSET := 0x11088000
 BOARD_DTB_OFFSET := 0x07c08000
 BOARD_KERNEL_BINARIES := kernel
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.init_fatal_reboot_target=bootloader
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_PAGESIZE := 2048
