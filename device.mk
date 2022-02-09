@@ -131,7 +131,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6891.rc \
     init.recovery.mt6893.rc \
-    init.recovery.usb.rc
+    init.recovery.usb.rc \
+    init.mt6891.rc
 
 # Display
 PRODUCT_PACKAGES += \
